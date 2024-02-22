@@ -2,7 +2,7 @@ version: '3'
 
 services:
   db:
-    container_name: mongo_db
+    container_name: mongo.local
     image: mongo:5
     restart: always
     ports:
@@ -10,4 +10,4 @@ services:
     environment:
       MONGO_DATABASE: nest-pokemon
     volumes:
-      - .mongo:/data/db
+      - ./mongo:/data/db
